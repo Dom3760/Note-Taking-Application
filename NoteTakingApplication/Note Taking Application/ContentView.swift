@@ -23,7 +23,6 @@ struct ContentView: View {
 //                    .position(x: 70.0, y: 50.0)
                 Rectangle()
                     .fill(Color(red: 240/255, green: 240/255, blue: 240/255))
-//                                           .frame()
                 NavigationLink(destination: newNoteView(noteArr: $notes).navigationBarBackButtonHidden(false)) {
                         //adds text to the button
                         Text("Add Item")

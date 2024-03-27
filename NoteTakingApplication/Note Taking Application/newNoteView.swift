@@ -26,14 +26,21 @@ struct newNoteView: View {
                     Rectangle()
                         .fill(Color(red: 240/255, green: 240/255, blue: 240/255))
                     TextEditor(text: $Body1)
-                        .frame(height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(height: 500, alignment: .center)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                 }
-                Button(action: ), label: ( {
-                    Text("Button")
+                Button(action: addItem, label: {
+                    Text("Add Item")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .font(.custom("MadimiOne-Regular", size: 20))
+                        .frame(width: 400, height: 100, alignment: .center)
                 })
-//                NavigationLink(destination: newNoteView().navigationBarBackButtonHidden(false)) {
+//                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(false))
+//                {
 //                    Text("Add Item")
 //                        .padding()
 //                        .background(Color.blue)
@@ -44,6 +51,9 @@ struct newNoteView: View {
 //                }
             }
         }
+    }
+    func addItem(){
+        ContentView()
     }
 }
 
